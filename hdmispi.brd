@@ -146,7 +146,7 @@
 <wire x1="30.48" y1="3.5921" x2="30.48" y2="20.82095" width="0" layer="20"/>
 <wire x1="30.48" y1="20.82095" x2="25.90095" y2="25.4" width="0" layer="20" curve="90"/>
 <text x="10.922" y="21.336" size="1.016" layer="26" rot="MR180" align="center">joefitz@securinghardware.com        
-HDMI Breakout v1.0
+HDMI Breakout v1.1
 W/ Microchip 24LC00/SN
 I2C EEPROM for EDID</text>
 <text x="16.51" y="12.7" size="1.27" layer="25" distance="100" rot="R180" align="center-right">5V
