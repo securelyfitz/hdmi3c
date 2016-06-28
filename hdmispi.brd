@@ -145,19 +145,19 @@
 <wire x1="26.8879" y1="0" x2="30.48" y2="3.5921" width="0" layer="20" curve="90"/>
 <wire x1="30.48" y1="3.5921" x2="30.48" y2="20.82095" width="0" layer="20"/>
 <wire x1="30.48" y1="20.82095" x2="25.90095" y2="25.4" width="0" layer="20" curve="90"/>
-<text x="10.922" y="21.336" size="1.016" layer="26" rot="MR180" align="center">joefitz@securinghardware.com
+<text x="10.922" y="21.336" size="1.016" layer="26" rot="MR180" align="center">joefitz@securinghardware.com        
 HDMI Breakout v1.0
-With Microchip 24LC00/SN
+W/ Microchip 24LC00/SN
 I2C EEPROM for EDID</text>
-<text x="18.415" y="12.7" size="1.27" layer="25" distance="100" rot="R180" align="center">5V
+<text x="16.51" y="12.7" size="1.27" layer="25" distance="100" rot="R180" align="center-right">5V
 NC
 CK-
 SDA
-HP
+HPD
 D0-
 D1-
 D2-</text>
-<text x="27.813" y="12.7" size="1.27" layer="25" distance="100" rot="R180" align="center">GND
+<text x="29.591" y="12.7" size="1.27" layer="25" distance="100" rot="R180" align="center-left">GND
 GND
 CK+
 SCL
@@ -270,10 +270,6 @@ D2+</text>
 <library name="hdmispi">
 <packages>
 <package name="HDMI">
-<hole x="-7.25" y="0" drill="1.3"/>
-<hole x="7.25" y="0" drill="1.3"/>
-<hole x="-7.85" y="-4.95" drill="1.3"/>
-<hole x="7.85" y="-4.95" drill="1.3"/>
 <smd name="P$1" x="4.75" y="1.254" dx="1.9" dy="0.3" layer="1" rot="R90"/>
 <smd name="P$2" x="4.25" y="1.254" dx="1.9" dy="0.3" layer="1" rot="R90"/>
 <smd name="P$3" x="3.75" y="1.254" dx="1.9" dy="0.3" layer="1" rot="R90"/>
@@ -297,6 +293,10 @@ D2+</text>
 <wire x1="7.85" y1="0" x2="-7.85" y2="0" width="0.127" layer="51"/>
 <wire x1="-7.85" y1="0" x2="-7.85" y2="-7.5" width="0.127" layer="51"/>
 <wire x1="-7.85" y1="-7.5" x2="7.85" y2="-7.5" width="0.127" layer="51"/>
+<pad name="P$20" x="-7.25" y="0" drill="1.3"/>
+<pad name="P$21" x="-7.85" y="-4.95" drill="1.3"/>
+<pad name="P$22" x="7.85" y="-4.95" drill="1.3"/>
+<pad name="P$23" x="7.25" y="0" drill="1.3"/>
 </package>
 <package name="SOIC8">
 <circle x="-2.5" y="-2.5" radius="0.1436" width="0.2032" layer="21"/>
@@ -549,15 +549,15 @@ design rules under a new name.</description>
 <vertex x="0" y="26.67"/>
 </polygon>
 <via x="26.67" y="2.54" extent="1-16" drill="0.6096" shape="square"/>
-<via x="3.81" y="6.35" extent="1-16" drill="0.6096" shape="square"/>
-<via x="3.81" y="13.97" extent="1-16" drill="0.6096" shape="square"/>
-<via x="1.27" y="19.05" extent="1-16" drill="0.6096" shape="square"/>
 <via x="16.51" y="15.24" extent="1-16" drill="0.6096" shape="square"/>
 <via x="27.813" y="20.447" extent="1-16" drill="0.6096" shape="square"/>
 <via x="11.684" y="15.367" extent="1-16" drill="0.6096" shape="square"/>
-<via x="11.684" y="2.667" extent="1-16" drill="0.6096" shape="square"/>
 <via x="26.924" y="9.017" extent="1-16" drill="0.6096" shape="square"/>
 <contactref element="U$2" pad="4"/>
+<contactref element="U$1" pad="P$23"/>
+<contactref element="U$1" pad="P$22"/>
+<contactref element="U$1" pad="P$21"/>
+<contactref element="U$1" pad="P$20"/>
 </signal>
 <signal name="TMDSC_N">
 <contactref element="JP1" pad="5"/>
@@ -627,8 +627,11 @@ design rules under a new name.</description>
 <wire x1="26.67" y1="22.86" x2="25.4" y2="24.13" width="0.254" layer="1" curve="90"/>
 <wire x1="25.4" y1="24.13" x2="11.43" y2="24.13" width="0.254" layer="1"/>
 <wire x1="8.874" y1="13.14" x2="9.33" y2="13.14" width="0.254" layer="1"/>
-<wire x1="11.43" y1="24.13" x2="8.874" y2="21.574" width="0.254" layer="1" curve="90"/>
-<wire x1="8.874" y1="21.574" x2="8.874" y2="13.14" width="0.254" layer="1"/>
+<wire x1="11.43" y1="24.13" x2="9.525" y2="22.225" width="0.254" layer="1" curve="90"/>
+<wire x1="9.525" y1="22.225" x2="9.525" y2="13.97" width="0.254" layer="1"/>
+<wire x1="9.525" y1="13.335" x2="9.525" y2="13.081" width="0.254" layer="1"/>
+<wire x1="9.33" y1="13.14" x2="9.525" y2="13.335" width="0.254" layer="1" curve="90"/>
+<wire x1="9.525" y1="13.335" x2="9.525" y2="13.97" width="0.254" layer="1"/>
 </signal>
 <signal name="TMDS0_N">
 <contactref element="JP1" pad="11"/>

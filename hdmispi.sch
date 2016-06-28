@@ -408,10 +408,6 @@
 <library name="hdmispi">
 <packages>
 <package name="HDMI">
-<hole x="-7.25" y="0" drill="1.3"/>
-<hole x="7.25" y="0" drill="1.3"/>
-<hole x="-7.85" y="-4.95" drill="1.3"/>
-<hole x="7.85" y="-4.95" drill="1.3"/>
 <smd name="P$1" x="4.75" y="1.254" dx="1.9" dy="0.3" layer="1" rot="R90"/>
 <smd name="P$2" x="4.25" y="1.254" dx="1.9" dy="0.3" layer="1" rot="R90"/>
 <smd name="P$3" x="3.75" y="1.254" dx="1.9" dy="0.3" layer="1" rot="R90"/>
@@ -435,6 +431,10 @@
 <wire x1="7.85" y1="0" x2="-7.85" y2="0" width="0.127" layer="51"/>
 <wire x1="-7.85" y1="0" x2="-7.85" y2="-7.5" width="0.127" layer="51"/>
 <wire x1="-7.85" y1="-7.5" x2="7.85" y2="-7.5" width="0.127" layer="51"/>
+<pad name="P$20" x="-7.25" y="0" drill="1.3"/>
+<pad name="P$21" x="-7.85" y="-4.95" drill="1.3"/>
+<pad name="P$22" x="7.85" y="-4.95" drill="1.3"/>
+<pad name="P$23" x="7.25" y="0" drill="1.3"/>
 </package>
 <package name="SOIC8">
 <circle x="-2.5" y="-2.5" radius="0.1436" width="0.2032" layer="21"/>
@@ -456,9 +456,9 @@
 </packages>
 <symbols>
 <symbol name="HDMI">
-<wire x1="-25.4" y1="7.62" x2="25.4" y2="7.62" width="0.254" layer="94"/>
-<wire x1="25.4" y1="7.62" x2="25.4" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="25.4" y1="-7.62" x2="-25.4" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-25.4" y1="7.62" x2="30.48" y2="7.62" width="0.254" layer="94"/>
+<wire x1="30.48" y1="7.62" x2="30.48" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="30.48" y1="-7.62" x2="-25.4" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="-25.4" y1="-7.62" x2="-25.4" y2="7.62" width="0.254" layer="94"/>
 <pin name="TMDS2_P" x="-22.86" y="-12.7" length="middle" rot="R90"/>
 <pin name="TMDS2_GND" x="-20.32" y="-12.7" length="middle" rot="R90"/>
@@ -481,6 +481,10 @@
 <pin name="DETECT" x="22.86" y="-12.7" length="middle" rot="R90"/>
 <text x="-24.892" y="8.636" size="1.778" layer="94">&gt;NAME</text>
 <text x="7.112" y="8.636" size="1.778" layer="94">&gt;VALUE</text>
+<pin name="H1" x="35.56" y="5.08" length="middle" rot="R180"/>
+<pin name="H2" x="35.56" y="2.54" length="middle" rot="R180"/>
+<pin name="H3" x="35.56" y="0" length="middle" rot="R180"/>
+<pin name="H4" x="35.56" y="-2.54" length="middle" rot="R180"/>
 </symbol>
 <symbol name="I2CEEPROM">
 <wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
@@ -511,6 +515,10 @@
 <connect gate="G$1" pin="DDC_D" pad="P$16"/>
 <connect gate="G$1" pin="DETECT" pad="P$19"/>
 <connect gate="G$1" pin="GND" pad="P$17"/>
+<connect gate="G$1" pin="H1" pad="P$20"/>
+<connect gate="G$1" pin="H2" pad="P$21"/>
+<connect gate="G$1" pin="H3" pad="P$22"/>
+<connect gate="G$1" pin="H4" pad="P$23"/>
 <connect gate="G$1" pin="NC" pad="P$14"/>
 <connect gate="G$1" pin="TMDS0_GND" pad="P$8"/>
 <connect gate="G$1" pin="TMDS0_N" pad="P$9"/>
@@ -593,10 +601,6 @@
 <wire x1="35.56" y1="83.82" x2="38.1" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="83.82" x2="38.1" y2="96.52" width="0.1524" layer="91"/>
 <junction x="38.1" y="96.52"/>
-<wire x1="38.1" y1="83.82" x2="38.1" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="73.66" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="73.66" x2="55.88" y2="76.2" width="0.1524" layer="91"/>
-<junction x="38.1" y="83.82"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -613,12 +617,13 @@
 <wire x1="33.02" y1="137.16" x2="33.02" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="33.02" y1="114.3" x2="33.02" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="99.06" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="99.06" x2="48.26" y2="99.06" width="0.1524" layer="91"/>
 <junction x="33.02" y="129.54"/>
 <junction x="33.02" y="121.92"/>
 <junction x="33.02" y="137.16"/>
 <junction x="33.02" y="137.16"/>
 <pinref part="U$1" gate="G$1" pin="TMDSC_GND"/>
+<wire x1="48.26" y1="99.06" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="114.3" x2="33.02" y2="114.3" width="0.1524" layer="91"/>
 <junction x="33.02" y="114.3"/>
 <pinref part="JP1" gate="A" pin="2"/>
@@ -633,12 +638,19 @@
 <wire x1="5.08" y1="88.9" x2="33.02" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="88.9" x2="33.02" y2="99.06" width="0.1524" layer="91"/>
 <junction x="33.02" y="99.06"/>
-<wire x1="55.88" y1="83.82" x2="55.88" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="88.9" x2="68.58" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="88.9" x2="68.58" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="71.12" x2="5.08" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="71.12" x2="5.08" y2="76.2" width="0.1524" layer="91"/>
-<junction x="5.08" y="76.2"/>
+<junction x="48.26" y="99.06"/>
+<wire x1="48.26" y1="99.06" x2="48.26" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="H4"/>
+<junction x="63.5" y="81.28"/>
+<wire x1="48.26" y1="81.28" x2="63.5" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="H3"/>
+<junction x="66.04" y="81.28"/>
+<wire x1="63.5" y1="81.28" x2="66.04" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="H2"/>
+<junction x="68.58" y="81.28"/>
+<wire x1="66.04" y1="81.28" x2="68.58" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="H1"/>
+<wire x1="68.58" y1="81.28" x2="71.12" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TMDSC_N" class="0">
@@ -673,11 +685,8 @@
 <wire x1="50.8" y1="101.6" x2="53.34" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="SDA"/>
 <wire x1="35.56" y1="76.2" x2="43.18" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="76.2" x2="43.18" y2="78.74" width="0.1524" layer="91"/>
 <junction x="43.18" y="91.44"/>
-<wire x1="43.18" y1="78.74" x2="43.18" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="78.74" x2="55.88" y2="78.74" width="0.1524" layer="91"/>
-<junction x="43.18" y="78.74"/>
+<wire x1="43.18" y1="76.2" x2="43.18" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DDC_CK" class="0">
@@ -690,11 +699,8 @@
 <wire x1="25.4" y1="111.76" x2="17.78" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="SCL"/>
 <wire x1="35.56" y1="78.74" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="78.74" x2="40.64" y2="81.28" width="0.1524" layer="91"/>
 <junction x="40.64" y="104.14"/>
-<wire x1="40.64" y1="81.28" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="81.28" x2="55.88" y2="81.28" width="0.1524" layer="91"/>
-<junction x="40.64" y="81.28"/>
+<wire x1="40.64" y1="78.74" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CEC" class="0">
