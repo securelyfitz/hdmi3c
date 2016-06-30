@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.2" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -137,56 +137,59 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="15.24" x2="0" y2="0" width="0" layer="20"/>
-<wire x1="0" y1="0" x2="12.7" y2="0" width="0" layer="20"/>
+<wire x1="2.54" y1="0" x2="12.7" y2="0" width="0" layer="20"/>
 <wire x1="12.7" y1="0" x2="12.7" y2="15.24" width="0" layer="20"/>
-<wire x1="12.7" y1="15.24" x2="0" y2="15.24" width="0" layer="20"/>
-<text x="4.953" y="11.684" size="1.016" layer="25" font="vector" align="center-left">git.io/
+<wire x1="12.7" y1="15.24" x2="2.54" y2="15.24" width="0" layer="20"/>
+<text x="4.753" y="7.684" size="1.016" layer="25" font="vector" align="center-left">git.io/
 hdmi3c
 
-  V2.1</text>
-<text x="5.461" y="7.62" size="1.27" layer="26" font="vector" distance="100" rot="MR180" align="center-left">HPD
-5V
-GND
+
+
+
+
+
+V2.1µ</text>
+<text x="5.461" y="7.62" size="1.27" layer="26" font="vector" distance="100" rot="MR180" align="center-left">5V
 SDA
 SCL
-CEC</text>
+GND
+CEC
+HPD</text>
+<wire x1="2.54" y1="0" x2="2.54" y2="3" width="0" layer="20"/>
+<wire x1="2.54" y1="12" x2="2.54" y2="15.24" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="hdmispi">
 <packages>
-<package name="HDMI-MALE-SPLINT">
-<smd name="P$1" x="-4.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$2" x="-4" y="-1.5" dx="0.6" dy="3" layer="1"/>
-<smd name="P$3" x="-3.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$4" x="-3" y="-1.5" dx="0.6" dy="3" layer="1"/>
-<smd name="P$5" x="-2.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$6" x="-2" y="-1.5" dx="0.6" dy="3" layer="1"/>
-<smd name="P$7" x="-1.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$8" x="-1" y="-1.5" dx="0.6" dy="3" layer="1"/>
-<smd name="P$9" x="-0.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$10" x="0" y="-1.5" dx="0.6" dy="3" layer="1"/>
-<smd name="P$11" x="0.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$12" x="1" y="-1.5" dx="0.6" dy="3" layer="1"/>
-<smd name="P$13" x="1.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$14" x="2" y="-1.5" dx="0.6" dy="3" layer="1"/>
-<smd name="P$15" x="2.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$16" x="3" y="-1.5" dx="0.6" dy="3" layer="1"/>
-<smd name="P$17" x="3.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$18" x="4" y="-1.5" dx="0.6" dy="3" layer="1"/>
-<smd name="P$19" x="4.5" y="-1.5" dx="0.6" dy="3" layer="16" rot="R180"/>
-<smd name="P$20" x="-7" y="-1" dx="1" dy="2" layer="16" rot="R180"/>
-<smd name="P$21" x="7" y="-1" dx="1" dy="2" layer="1"/>
-<smd name="P$22" x="7" y="-1" dx="1" dy="2" layer="16" rot="R180"/>
-<smd name="P$23" x="-7" y="-1" dx="1" dy="2" layer="1"/>
-<wire x1="-7.5" y1="0" x2="-7.5" y2="-4" width="0.127" layer="21"/>
-<wire x1="-7.5" y1="-4" x2="7.5" y2="-4" width="0.127" layer="21"/>
-<wire x1="7.5" y1="-4" x2="7.5" y2="0" width="0.127" layer="21"/>
-<wire x1="7.5" y1="0" x2="-7.5" y2="0" width="0.127" layer="21"/>
-<wire x1="-7.5" y1="0" x2="7.5" y2="0" width="0.127" layer="22"/>
-<wire x1="7.5" y1="0" x2="7.5" y2="-4" width="0.127" layer="22"/>
-<wire x1="7.5" y1="-4" x2="-7.5" y2="-4" width="0.127" layer="22"/>
-<wire x1="-7.5" y1="-4" x2="-7.5" y2="0" width="0.127" layer="22"/>
+<package name="HDMI-MALE-MICRO-SPLINT">
+<wire x1="-2.8" y1="2.5" x2="-2.8" y2="0" width="0" layer="20"/>
+<wire x1="-2.8" y1="0" x2="-6" y2="0" width="0" layer="20"/>
+<wire x1="-2.8" y1="2.5" x2="2.8" y2="2.5" width="0" layer="20"/>
+<wire x1="2.8" y1="2.5" x2="2.8" y2="0" width="0" layer="20"/>
+<wire x1="2.8" y1="0" x2="6" y2="0" width="0" layer="20"/>
+<smd name="P$1" x="-1.8" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$2" x="-1.6" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$3" x="-1.4" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$4" x="-1.2" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$5" x="-1" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$6" x="-0.8" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$7" x="-0.6" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$8" x="-0.4" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$9" x="-0.2" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$10" x="0" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$11" x="0.2" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$12" x="0.4" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$13" x="0.6" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$14" x="0.8" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$15" x="1" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$16" x="1.2" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$17" x="1.4" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$18" x="1.6" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$19" x="1.8" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$20" x="-2.4" y="0.8" dx="0.2" dy="0.2" layer="1"/>
+<smd name="P$21" x="-2.4" y="0.4" dx="0.2" dy="0.2" layer="1"/>
+<smd name="P$22" x="2.4" y="0.8" dx="0.2" dy="0.2" layer="1"/>
+<smd name="P$23" x="2.4" y="0.4" dx="0.2" dy="0.2" layer="1"/>
 </package>
 <package name="SOIC8">
 <circle x="-2.5" y="-2.5" radius="0.1436" width="0.2032" layer="21"/>
@@ -473,91 +476,101 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U$1" library="hdmispi" package="HDMI-MALE-SPLINT" value="HDMIMALE-SPLINT" x="0" y="7.62" rot="R90"/>
-<element name="U$2" library="hdmispi" package="SOIC8" value="I2CEEPROM-SOIC8" x="7.366" y="5.08" smashed="yes"/>
+<element name="U$1" library="hdmispi" package="HDMI-MALE-MICRO-SPLINT" value="HDMIHDMI-MALE-MICRO-SPLINT" x="2.54" y="7.62" rot="R90"/>
+<element name="U$2" library="hdmispi" package="SOIC8" value="I2CEEPROM-SOIC8" x="7.5" y="6.3" smashed="yes"/>
 <element name="JP1" library="SparkFun-Connectors" package="1X06-SIP_LOCK" value="0" x="11.43" y="1.27" smashed="yes" rot="R90"/>
 </elements>
 <signals>
 <signal name="5V">
-<contactref element="U$1" pad="P$18"/>
+<contactref element="U$1" pad="P$19"/>
 <contactref element="U$2" pad="8"/>
-<contactref element="JP1" pad="5"/>
-<wire x1="1.5" y1="11.62" x2="5.588" y2="11.62" width="0.4064" layer="1"/>
-<wire x1="5.588" y1="11.62" x2="11.24" y2="11.62" width="0.4064" layer="1"/>
-<wire x1="11.24" y1="11.62" x2="11.43" y2="11.43" width="0.4064" layer="1"/>
-<wire x1="5.461" y1="7.78" x2="5.461" y2="11.493" width="0.4064" layer="1"/>
-<wire x1="5.461" y1="11.493" x2="5.588" y2="11.62" width="0.4064" layer="1"/>
+<contactref element="JP1" pad="6"/>
+<wire x1="1.74" y1="9.42" x2="4.42" y2="9.42" width="0.2" layer="16"/>
+<wire x1="4.42" y1="9.42" x2="5.6" y2="10.6" width="0.2" layer="16"/>
+<via x="5.6" y="10.6" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="5.6" y1="10.6" x2="5.595" y2="9" width="0.254" layer="1"/>
+<wire x1="11.684" y1="13.97" x2="5.6" y2="13.97" width="0.254" layer="16"/>
+<wire x1="5.6" y1="13.97" x2="5.6" y2="10.6" width="0.254" layer="16"/>
 </signal>
 <signal name="GND">
-<contactref element="U$1" pad="P$2"/>
-<contactref element="U$1" pad="P$5"/>
-<contactref element="U$1" pad="P$8"/>
-<contactref element="U$1" pad="P$17"/>
-<contactref element="U$1" pad="P$11"/>
+<contactref element="U$1" pad="P$4"/>
+<contactref element="U$1" pad="P$7"/>
+<contactref element="U$1" pad="P$10"/>
+<contactref element="U$1" pad="P$16"/>
+<contactref element="U$1" pad="P$13"/>
 <polygon width="0.254" layer="1">
-<vertex x="0" y="0"/>
+<vertex x="2.6" y="0"/>
 <vertex x="12.7" y="0"/>
 <vertex x="12.7" y="15.24"/>
-<vertex x="0" y="15.24"/>
+<vertex x="2.6" y="15.24"/>
 </polygon>
 <polygon width="0.254" layer="16">
-<vertex x="0" y="0"/>
+<vertex x="2.6" y="0"/>
 <vertex x="12.7" y="0"/>
 <vertex x="12.7" y="15.24"/>
-<vertex x="0" y="15.24"/>
+<vertex x="2.6" y="15.24"/>
 </polygon>
 <contactref element="U$2" pad="4"/>
 <contactref element="U$1" pad="P$23"/>
 <contactref element="U$1" pad="P$22"/>
 <contactref element="U$1" pad="P$21"/>
 <contactref element="U$1" pad="P$20"/>
-<contactref element="JP1" pad="4"/>
-<via x="2.413" y="13.335" extent="1-16" drill="0.3302" diameter="0.254"/>
-<via x="9.652" y="13.081" extent="1-16" drill="0.3302" diameter="0.254"/>
-<via x="9.398" y="10.541" extent="1-16" drill="0.3302" diameter="0.254"/>
-<via x="4.7244" y="10.8712" extent="1-16" drill="0.3302" diameter="0.254"/>
-<via x="2.54" y="1.905" extent="1-16" drill="0.3302" diameter="0.254"/>
-<via x="10.287" y="2.54" extent="1-16" drill="0.3302" diameter="0.254"/>
-<via x="5.588" y="4.826" extent="1-16" drill="0.3302" diameter="0.254"/>
-<via x="4.7244" y="9.144" extent="1-16" drill="0.3302" diameter="0.254"/>
-<via x="10.414" y="7.874" extent="1-16" drill="0.3302" diameter="0.254"/>
+<via x="3.87" y="13.305" extent="1-16" drill="0.3302" diameter="0.254"/>
+<via x="6.324" y="7.464" extent="1-16" drill="0.3302" diameter="0.254"/>
+<contactref element="JP1" pad="3"/>
+<via x="3.324" y="0.664" extent="1-16" drill="0.3302" diameter="0.254"/>
+<via x="9.47" y="13.105" extent="1-16" drill="0.3302" diameter="0.254"/>
+<via x="7.67" y="10.505" extent="1-16" drill="0.3302" diameter="0.254"/>
+<wire x1="1.74" y1="8.22" x2="1.76" y2="8.2" width="0.2" layer="16"/>
+<wire x1="1.76" y1="8.2" x2="4" y2="8.2" width="0.2" layer="16"/>
+<wire x1="1.74" y1="5.22" x2="2.14" y2="5.22" width="0.254" layer="1"/>
+<wire x1="1.74" y1="5.22" x2="1.76" y2="5.2" width="0.254" layer="1"/>
+<wire x1="1.76" y1="5.2" x2="2.6" y2="5.2" width="0.254" layer="1"/>
+<wire x1="1.74" y1="10.02" x2="2.14" y2="10.02" width="0.254" layer="1"/>
+<wire x1="1.74" y1="10.02" x2="1.76" y2="10" width="0.254" layer="1"/>
+<wire x1="1.76" y1="10" x2="2.6" y2="10" width="0.254" layer="1"/>
+<wire x1="1.74" y1="5.22" x2="3.324" y2="5.22" width="0.254" layer="1"/>
+<wire x1="3.324" y1="5.22" x2="3.324" y2="0.664" width="0.254" layer="1"/>
+<wire x1="1.74" y1="10.02" x2="2.62" y2="10.02" width="0.254" layer="1"/>
+<wire x1="2.62" y1="10.02" x2="3.2" y2="10.6" width="0.254" layer="1"/>
+<wire x1="3.2" y1="10.6" x2="3.2" y2="12.635" width="0.254" layer="1"/>
+<wire x1="3.2" y1="12.635" x2="3.87" y2="13.305" width="0.254" layer="1"/>
 </signal>
 <signal name="DDC_D">
-<contactref element="U$1" pad="P$16"/>
+<contactref element="U$1" pad="P$18"/>
 <contactref element="U$2" pad="5"/>
-<contactref element="JP1" pad="3"/>
-<wire x1="11.43" y1="6.35" x2="10.701" y2="6.35" width="0.4064" layer="1"/>
-<wire x1="10.701" y1="6.35" x2="9.271" y2="7.78" width="0.4064" layer="1"/>
-<wire x1="1.5" y1="10.62" x2="3.937" y2="10.62" width="0.4064" layer="1"/>
-<wire x1="3.937" y1="10.62" x2="3.937" y2="6.35" width="0.4064" layer="1"/>
-<wire x1="3.937" y1="6.35" x2="11.43" y2="6.35" width="0.4064" layer="1"/>
+<contactref element="JP1" pad="5"/>
+<wire x1="1.74" y1="9.22" x2="3.3" y2="9.22" width="0.2" layer="1"/>
+<wire x1="9.4" y1="11.43" x2="11.43" y2="11.43" width="0.254" layer="1"/>
+<wire x1="9.405" y1="9" x2="9.405" y2="11.425" width="0.254" layer="1"/>
+<wire x1="9.405" y1="11.425" x2="9.4" y2="11.43" width="0.254" layer="1"/>
+<wire x1="9.4" y1="11.43" x2="4.83" y2="11.43" width="0.254" layer="1"/>
+<wire x1="4.83" y1="11.43" x2="3.3" y2="9.9" width="0.254" layer="1"/>
+<wire x1="3.3" y1="9.9" x2="3.3" y2="9.22" width="0.254" layer="1"/>
 </signal>
 <signal name="DDC_CK">
-<contactref element="U$1" pad="P$15"/>
+<contactref element="U$1" pad="P$17"/>
 <contactref element="U$2" pad="6"/>
-<contactref element="JP1" pad="2"/>
-<via x="6.731" y="10.414" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="1.5" y1="10.12" x2="6.731" y2="10.12" width="0.4064" layer="16"/>
-<wire x1="6.731" y1="10.12" x2="6.731" y2="10.414" width="0.4064" layer="16"/>
-<wire x1="6.731" y1="10.12" x2="6.731" y2="3.81" width="0.4064" layer="16"/>
-<wire x1="6.731" y1="3.81" x2="11.684" y2="3.81" width="0.4064" layer="16"/>
-<wire x1="8.001" y1="7.78" x2="8.001" y2="10.414" width="0.4064" layer="1"/>
-<wire x1="8.001" y1="10.414" x2="6.731" y2="10.414" width="0.4064" layer="1"/>
+<contactref element="JP1" pad="4"/>
+<wire x1="1.74" y1="9.02" x2="11.554" y2="9.02" width="0.254" layer="16"/>
+<wire x1="11.554" y1="9.02" x2="11.684" y2="8.89" width="0.254" layer="16"/>
+<wire x1="8.135" y1="9" x2="8.135" y2="8.065" width="0.254" layer="1"/>
+<wire x1="8.135" y1="8.065" x2="8.8" y2="7.4" width="0.254" layer="1"/>
+<wire x1="8.8" y1="7.4" x2="10.194" y2="7.4" width="0.254" layer="1"/>
+<wire x1="10.194" y1="7.4" x2="11.684" y2="8.89" width="0.254" layer="1"/>
 </signal>
 <signal name="N$1">
-<contactref element="U$1" pad="P$19"/>
-<contactref element="JP1" pad="6"/>
-<wire x1="1.5" y1="12.12" x2="7.04" y2="12.12" width="0.4064" layer="16"/>
-<wire x1="7.04" y1="12.12" x2="8.89" y2="13.97" width="0.4064" layer="16"/>
-<wire x1="8.89" y1="13.97" x2="11.684" y2="13.97" width="0.4064" layer="16"/>
-</signal>
-<signal name="N$3">
+<contactref element="U$1" pad="P$1"/>
 <contactref element="JP1" pad="1"/>
-<contactref element="U$1" pad="P$13"/>
-<wire x1="1.5" y1="9.12" x2="3.937" y2="9.12" width="0.4064" layer="16"/>
-<wire x1="3.937" y1="9.12" x2="3.937" y2="0.508" width="0.4064" layer="16"/>
-<wire x1="3.937" y1="0.508" x2="10.668" y2="0.508" width="0.4064" layer="16"/>
-<wire x1="10.668" y1="0.508" x2="11.43" y2="1.27" width="0.4064" layer="16"/>
+<wire x1="1.74" y1="5.82" x2="3.6" y2="5.82" width="0.2" layer="16"/>
+<wire x1="3.6" y1="5.82" x2="3.6" y2="1.27" width="0.254" layer="16"/>
+<wire x1="3.6" y1="1.27" x2="11.43" y2="1.27" width="0.254" layer="16"/>
+</signal>
+<signal name="N$2">
+<contactref element="U$1" pad="P$15"/>
+<contactref element="JP1" pad="2"/>
+<wire x1="1.74" y1="8.62" x2="6.874" y2="8.62" width="0.2" layer="16"/>
+<wire x1="6.874" y1="8.62" x2="11.684" y2="3.81" width="0.2" layer="16"/>
 </signal>
 </signals>
 </board>

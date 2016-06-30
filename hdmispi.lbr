@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -216,6 +216,36 @@
 <wire x1="7.5" y1="-4" x2="-7.5" y2="-4" width="0.127" layer="22"/>
 <wire x1="-7.5" y1="-4" x2="-7.5" y2="0" width="0.127" layer="22"/>
 </package>
+<package name="HDMI-MALE-MICRO-SPLINT">
+<wire x1="-2.8" y1="2.5" x2="-2.8" y2="0" width="0" layer="20"/>
+<wire x1="-2.8" y1="0" x2="-6" y2="0" width="0" layer="20"/>
+<wire x1="-2.8" y1="2.5" x2="2.8" y2="2.5" width="0" layer="20"/>
+<wire x1="2.8" y1="2.5" x2="2.8" y2="0" width="0" layer="20"/>
+<wire x1="2.8" y1="0" x2="6" y2="0" width="0" layer="20"/>
+<smd name="P$1" x="-1.8" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$2" x="-1.6" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$3" x="-1.4" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$4" x="-1.2" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$5" x="-1" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$6" x="-0.8" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$7" x="-0.6" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$8" x="-0.4" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$9" x="-0.2" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$10" x="0" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$11" x="0.2" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$12" x="0.4" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$13" x="0.6" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$14" x="0.8" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$15" x="1" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$16" x="1.2" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$17" x="1.4" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$18" x="1.6" y="0.8" dx="0.24" dy="3.5" layer="1"/>
+<smd name="P$19" x="1.8" y="0.8" dx="0.24" dy="3.5" layer="16" rot="R180"/>
+<smd name="P$20" x="-2.4" y="0.8" dx="0.2" dy="0.2" layer="1"/>
+<smd name="P$21" x="-2.4" y="0.4" dx="0.2" dy="0.2" layer="1"/>
+<smd name="P$22" x="2.4" y="0.8" dx="0.2" dy="0.2" layer="1"/>
+<smd name="P$23" x="2.4" y="0.4" dx="0.2" dy="0.2" layer="1"/>
+</package>
 </packages>
 <symbols>
 <symbol name="HDMI">
@@ -330,6 +360,36 @@
 <technology name=""/>
 </technologies>
 </device>
+<device name="HDMI-MALE-MICRO-SPLINT" package="HDMI-MALE-MICRO-SPLINT">
+<connects>
+<connect gate="G$1" pin="5V" pad="P$19"/>
+<connect gate="G$1" pin="CEC" pad="P$15"/>
+<connect gate="G$1" pin="DDC_CK" pad="P$17"/>
+<connect gate="G$1" pin="DDC_D" pad="P$18"/>
+<connect gate="G$1" pin="DETECT" pad="P$1"/>
+<connect gate="G$1" pin="GND" pad="P$16"/>
+<connect gate="G$1" pin="H1" pad="P$20"/>
+<connect gate="G$1" pin="H2" pad="P$21"/>
+<connect gate="G$1" pin="H3" pad="P$22"/>
+<connect gate="G$1" pin="H4" pad="P$23"/>
+<connect gate="G$1" pin="NC" pad="P$2"/>
+<connect gate="G$1" pin="TMDS0_GND" pad="P$10"/>
+<connect gate="G$1" pin="TMDS0_N" pad="P$11"/>
+<connect gate="G$1" pin="TMDS0_P" pad="P$9"/>
+<connect gate="G$1" pin="TMDS1_GND" pad="P$7"/>
+<connect gate="G$1" pin="TMDS1_N" pad="P$8"/>
+<connect gate="G$1" pin="TMDS1_P" pad="P$6"/>
+<connect gate="G$1" pin="TMDS2_GND" pad="P$4"/>
+<connect gate="G$1" pin="TMDS2_N" pad="P$5"/>
+<connect gate="G$1" pin="TMDS2_P" pad="P$3"/>
+<connect gate="G$1" pin="TMDSC_GND" pad="P$13"/>
+<connect gate="G$1" pin="TMDSC_N" pad="P$14"/>
+<connect gate="G$1" pin="TMDSC_P" pad="P$12"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="I2CEEPROM-SOIC8">
@@ -348,17 +408,6 @@
 <connect gate="G$1" pin="VCC" pad="8"/>
 <connect gate="G$1" pin="VSS" pad="4"/>
 </connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="HDMI-MALE-SPLINT">
-<gates>
-</gates>
-<devices>
-<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
